@@ -1,23 +1,51 @@
-function WeatherCard({ data }) {
+import React from "react";
+
+export default function WeatherCard({
+  city,
+  country,
+  temperature,
+  humidity,
+  windSpeed,
+  icon,
+  description,
+  unit,
+}) {
   return (
-    <div className="bg-white text-gray-800 rounded-lg shadow-lg p-6 w-80">
-      <h2 className="text-2xl font-bold mb-2">{data.name}, {data.sys.country}</h2>
-      <div className="flex items-center justify-between">
-        <div>
-          <p className="text-5xl font-extrabold">{Math.round(data.main.temp)}°C</p>
-          <p className="capitalize">{data.weather[0].description}</p>
-        </div>
+    <div className="mt-6 p-6 rounded-2xl shadow-lg bg-blue-50 dark:bg-gray-700 transition-colors duration-300">
+      <h2 className="text-2xl font-semibold mb-2">
+        {city}, {country}
+      </h2>
+
+      <div className="flex flex-col items-center">
+        {/* Weather Icon */}
         <img
-          src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
-          alt={data.weather[0].description}
+          src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
+          alt={description}
+          className="w-24 h-24"
         />
-      </div>
-      <div className="mt-4 grid grid-cols-2 gap-4 text-sm">
-        <p>💧 Humidity: {data.main.humidity}%</p>
-        <p>🌬 Wind: {Math.round(data.wind.speed)} m/s</p>
+
+        {/* Temperature */}
+        <p className="text-4xl font-bold mb-2">
+          {temperature} <span className="text-lg">{unit}</span>
+        </p>
+
+        {/* Description */}
+        <p className="capitalize text-gray-700 dark:text-gray-300 mb-4">
+          {description}
+        </p>
+
+        {/* Other Details */}
+        <div className="flex justify-around w-full text-sm text-gray-600 dark:text-gray-200">
+          <div>
+            <p className="font-semibold">💧 Humidity</p>
+            <p>{humidity}%</p>
+          </div>
+          <div>
+            <p className="font-semibold">🌬 Wind Speed</p>
+            <p>{windSpeed} km/h</p>
+          </div>
+        </div>
       </div>
     </div>
   );
 }
-
-export default WeatherCard;
