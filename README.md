@@ -1,26 +1,17 @@
-Weather Dashboard
+# 🌦️ Weather Dashboard
 
-A responsive and interactive Weather Dashboard built with React (Vite) and TailwindCSS.
-It allows users to search for weather conditions in any city, fetching real-time data from the OpenWeatherMap API.
+A responsive React + Tailwind CSS weather app that fetches live weather data from OpenWeatherMap API.
 
-🚀 Features
+## 🌐 Live Demo
+[View on Netlify](https://dailyweather-dashboard.netlify.app)
 
-🔍 City Search – Find weather details for any city worldwide.
+## 💻 GitHub Repository
+[View Source Code](https://github.com/phoebestanley/weather-dashboard)
 
-🌡 Weather Data – Displays temperature, humidity, wind speed, and conditions.
-
-🖼 Weather Icons – Shows icons for sunny, cloudy, rainy, etc.
-
-📱 Responsive Design – Works seamlessly on mobile, tablet, and desktop.
-
-🔄 Auto & Manual Refresh – Keeps your weather data up to date.
-
-⚠️ Error Handling – Graceful alerts for invalid cities or network issues.
-
-🛠 Tech Stack
-
-React (Vite) – frontend framework
-
-Tailwind CSS – styling
-
-OpenWeatherMap API – weather data provider
+## ⚙️ Features
+- Search weather by city
+- Display temperature, humidity, wind speed
+- Real-time weather icons
+- Dark/Light Mode toggle
+- °C / °F switch
+- Responsive Tailwind design
